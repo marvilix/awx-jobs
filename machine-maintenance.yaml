@@ -1,0 +1,14 @@
+---
+- name: Machine Maintenance
+  tasks:
+  - name: Running upgrade
+    become: true
+    apt:
+      update_cache: yes
+      upgrade: yes
+
+  - name: Verifying Common Packages
+    apt:
+      name:
+      - htop
+      - vim
