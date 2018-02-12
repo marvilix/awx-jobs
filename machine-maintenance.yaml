@@ -1,5 +1,6 @@
 ---
 - name: Machine Maintenance
+  hosts: vms
   tasks:
   - name: Running upgrade
     become: true
